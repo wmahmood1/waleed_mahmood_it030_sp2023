@@ -67,10 +67,10 @@ padding: 5px;
 }
 
 .click-me-button:hover{
-color: black;
 background-color: white;
 font-family: Arial, Verdana, sans-serif;
-border: 1px solid white;
+border: 1px solid black;
+color: black;
 }
 
 #coming-soon-box{
