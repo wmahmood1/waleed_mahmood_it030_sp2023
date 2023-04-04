@@ -1,0 +1,128 @@
+body {
+	font-family: arial, verdana, sans-serif;
+	font-size: 12px;
+	color: black;
+	background-color: #f5f5f5; 
+}
+header {
+	color: black;
+	margin: 6px;
+	padding: 5px;
+}
+.mainNAV, .section, .aside, article, footer {
+	border: 0.25px solid black;
+	color: black;
+	margin: 6px;
+	padding: 5px;
+}
+.section, article {
+	background-color: #fafad2; 
+}
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.grid {
+	display: grid;
+	grid-template-areas: "header" "nav" "section" "aside" "article" "footer";
+}
+header {
+	text-align: center;
+	grid-area: header;
+}
+.mainNAV {
+	grid-area: nav;
+	background-color: #b22222
+}
+.mainNAV li {
+	font-weight: bold;
+	display: inline-block;
+}
+.mainNAV ul {
+	display: flex;
+	justify-content: space-evenly;
+	padding: 0px;
+	margin: 8px;
+}
+.mainNAV li a:hover {
+	color: white;
+}
+.mainNAV li a {
+	color: black;
+}
+.section {
+	grid-area: section;
+	height: 395px;
+}
+img {
+	width: 200px;
+	height: 200px;
+}
+img, figcaption {
+	margin: 6px;
+}
+#description {
+	text-align: left;
+    display: flex;
+    vertical-align: center;
+    align-items: center;
+}
+.aside {
+    grid-area: aside;
+}
+footer {
+	background-color: #b22222;
+	height: 70px;
+	font-weight: bold;
+	display: flex;
+	align-items: center;
+	grid-area: footer;
+}
+
+@media screen and (min-width: 576px) {
+	.grid {
+		grid-template-columns: 3fr 1.75fr;
+		grid-template-areas: 
+		"header header"
+		"nav nav"
+		"section section"
+		"article aside"
+		"footer footer";
+	}
+	.aside {
+		height: auto;
+	}
+	article {
+		height: 430px;
+		overflow: scroll;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.grid {
+		grid-template-columns: 3.6fr 1.4fr;
+		grid-template-areas: 
+		"header header"
+		"nav nav"
+		"section aside"
+		"article aside"
+		"footer footer";
+	}
+	.aside {
+		height: auto;
+		display: flex;
+    	align-items: center;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.grid {
+		grid-template-columns: 5fr 1.75fr;
+		grid-template-areas: 
+		"header header"
+		"nav nav"
+		"section aside"
+		"article aside"
+		"footer footer";
+	}
+	article {
+		height: 750px;
+	}
+}
